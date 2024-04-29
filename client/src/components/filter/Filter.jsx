@@ -31,12 +31,12 @@ function Filter() {
       </h1>
       <div className="top">
         <div className="item">
-          <label htmlFor="city">Location</label>
+          <label htmlFor="city">Ubicacion</label>
           <input
             type="text"
             id="city"
             name="city"
-            placeholder="City Location"
+            placeholder="Municipio"
             onChange={handleChange}
             defaultValue={query.city}
           />
@@ -44,35 +44,35 @@ function Filter() {
       </div>
       <div className="bottom">
         <div className="item">
-          <label htmlFor="type">Type</label>
+          <label htmlFor="type">Tipo</label>
           <select
             name="type"
             id="type"
             onChange={handleChange}
             defaultValue={query.type}
           >
-            <option value="">any</option>
-            <option value="buy">Buy</option>
-            <option value="rent">Rent</option>
+            <option value="">escoge</option>
+            <option value="vender">Comprar</option>
+            <option value="rentar">Rentar</option>
           </select>
         </div>
         <div className="item">
-          <label htmlFor="property">Property</label>
+          <label htmlFor="property">Propiedad</label>
           <select
             name="property"
             id="property"
             onChange={handleChange}
             defaultValue={query.property}
           >
-            <option value="">any</option>
-            <option value="apartment">Apartment</option>
-            <option value="house">House</option>
-            <option value="condo">Condo</option>
-            <option value="land">Land</option>
+            <option value="">escoge</option>
+            <option value="apartment">Apartamento</option>
+            <option value="house">Casa</option>
+            <option value="condo">Condominio</option>
+            <option value="land">Predio</option>
           </select>
         </div>
         <div className="item">
-          <label htmlFor="minPrice">Min Price</label>
+          <label htmlFor="minPrice">Precio Min</label>
           <input
             type="number"
             id="minPrice"
@@ -83,7 +83,7 @@ function Filter() {
           />
         </div>
         <div className="item">
-          <label htmlFor="maxPrice">Max Price</label>
+          <label htmlFor="maxPrice">Precio Max</label>
           <input
             type="text"
             id="maxPrice"
@@ -94,12 +94,12 @@ function Filter() {
           />
         </div>
         <div className="item">
-          <label htmlFor="bedroom">Bedroom</label>
+          <label htmlFor="bedroom">Habitaciones</label>
           <input
             type="text"
             id="bedroom"
             name="bedroom"
-            placeholder="any"
+            placeholder="cantidad"
             onChange={handleChange}
             defaultValue={query.bedroom}
           />

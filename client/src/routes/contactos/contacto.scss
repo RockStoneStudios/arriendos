@@ -1,0 +1,35 @@
+@import "../../responsive.scss";
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+   
+    @include lg{
+        
+      }
+
+      @include md{
+         display: flex;
+         flex-direction: column;
+      }
+    
+    
+    .omar{
+        flex: 2;
+
+      .text-omar{
+         margin-top: 15px;
+         line-height: 20px;
+      }  
+    }
+
+    .chino {
+        flex:2;
+
+        .text-chino{
+            margin-top: 15px;
+            line-height: 20px;
+        }
+    }
+}

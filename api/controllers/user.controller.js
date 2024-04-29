@@ -1,5 +1,6 @@
 import prisma from "../lib/prisma.js";
 import bcrypt from "bcrypt";
+import { sendEmail } from "../lib/smtp.js";
 
 export const getUsers = async (req, res) => {
   try {
@@ -154,3 +155,23 @@ export const getNotificationNumber = async (req, res) => {
     res.status(500).json({ message: "Failed to get profile posts!" });
   }
 };
+
+
+export const lease = async (req,res) => {
+
+   const tokenUserId = req.userId;
+   try{
+
+     const user = await prisma.user.findUnique({
+      where: {
+        id: tokenUserId,
+      },
+    });
+    await sendEmail(user.email);
+    
+    return res.json(200).json({message : "Email Send Successful"});
+   }catch(error){
+    res.status(500).json(error);
+   }
+}
+

@@ -2,15 +2,22 @@ import { Link } from "react-router-dom";
 import "./card.scss";
 
 function Card({ item }) {
+  console.log(item);
   return (
     <div className="card">
       <Link to={`/${item.id}`} className="imageContainer">
         <img src={item.images[0]} alt="" />
       </Link>
       <div className="textContainer">
+        <div>
+
         <h2 className="title">
           <Link to={`/${item.id}`}>{item.title}</Link>
         </h2>
+        <div>
+            <h6 className={item.estado === 'disponible' ? 'dispo' : 'no-dispo'}>{item.estado}</h6>
+        </div>
+        </div>
         <p className="address">
           <img src="/pin.png" alt="" />
           <span>{item.address}</span>
@@ -20,13 +27,14 @@ function Card({ item }) {
           <div className="features">
             <div className="feature">
               <img src="/bed.png" alt="" />
-              <span>{item.bedroom} bedroom</span>
+              <span>{item.bedroom} Habitaciones</span>
             </div>
             <div className="feature">
               <img src="/bath.png" alt="" />
-              <span>{item.bathroom} bathroom</span>
+              <span>{item.bathroom} Baños</span>
             </div>
           </div>
+         
           <div className="icons">
             <div className="icon">
               <img src="/save.png" alt="" />

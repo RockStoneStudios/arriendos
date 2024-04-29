@@ -12,6 +12,7 @@ function SinglePage() {
   const [saved, setSaved] = useState(post.isSaved);
   const { currentUser } = useContext(AuthContext);
   const navigate = useNavigate();
+  
 
   const handleSave = async () => {
     if (!currentUser) {
@@ -27,11 +28,22 @@ function SinglePage() {
     }
   };
 
+  const alquilar = async () => {
+     try{
+        await apiRequest.get('/users/lease');
+        
+        navigate("/nosotros");
+       
+     }catch(error){
+      console.log(error);
+     }
+  }
+
   return (
     <div className="singlePage">
       <div className="details">
         <div className="wrapper">
-          <Slider images={post.images} />
+         <Slider images={post.images} />
           <div className="info">
             <div className="top">
               <div className="post">
@@ -63,85 +75,85 @@ function SinglePage() {
             <div className="feature">
               <img src="/utility.png" alt="" />
               <div className="featureText">
-                <span>Utilities</span>
+                <span>Utilidades</span>
                 {post.postDetail.utilities === "owner" ? (
-                  <p>Owner is responsible</p>
+                  <p>El Dueño es Responsable</p>
                 ) : (
-                  <p>Tenant is responsible</p>
+                  <p>Arrendatario es Responsable</p>
                 )}
               </div>
             </div>
             <div className="feature">
               <img src="/pet.png" alt="" />
               <div className="featureText">
-                <span>Pet Policy</span>
+                <span>Politica de Mascotas</span>
                 {post.postDetail.pet === "allowed" ? (
-                  <p>Pets Allowed</p>
+                  <p>Mascotas Permitidas</p>
                 ) : (
-                  <p>Pets not Allowed</p>
+                  <p>Mascotas no Permitidas</p>
                 )}
               </div>
             </div>
             <div className="feature">
               <img src="/fee.png" alt="" />
               <div className="featureText">
-                <span>Income Policy</span>
+                <span>Política de Ingresos</span>
                 <p>{post.postDetail.income}</p>
               </div>
             </div>
           </div>
-          <p className="title">Sizes</p>
+          <p className="title">Dimensiones</p>
           <div className="sizes">
             <div className="size">
               <img src="/size.png" alt="" />
-              <span>{post.postDetail.size} sqft</span>
+              <span>{post.postDetail.size} mt²</span>
             </div>
             <div className="size">
               <img src="/bed.png" alt="" />
-              <span>{post.bedroom} beds</span>
+              <span>{post.bedroom} Habitaciones</span>
             </div>
             <div className="size">
               <img src="/bath.png" alt="" />
-              <span>{post.bathroom} bathroom</span>
+              <span>{post.bathroom} Baños</span>
             </div>
           </div>
-          <p className="title">Nearby Places</p>
+          <p className="title">Lugares Cercanos</p>
           <div className="listHorizontal">
             <div className="feature">
               <img src="/school.png" alt="" />
               <div className="featureText">
-                <span>School</span>
+                <span>Escuela</span>
                 <p>
-                  {post.postDetail.school > 999
+                  a {post.postDetail.school > 999
                     ? post.postDetail.school / 1000 + "km"
                     : post.postDetail.school + "m"}{" "}
-                  away
+                  
                 </p>
               </div>
             </div>
             <div className="feature">
-              <img src="/pet.png" alt="" />
+              <img src="/hospital.jpg" alt="" />
               <div className="featureText">
-                <span>Bus Stop</span>
-                <p>{post.postDetail.bus}m away</p>
+                <span>Hospital</span>
+                <p>a {post.postDetail.bus}m </p>
               </div>
             </div>
             <div className="feature">
-              <img src="/fee.png" alt="" />
+              <img src="/iglesia.webp" alt="" />
               <div className="featureText">
-                <span>Restaurant</span>
-                <p>{post.postDetail.restaurant}m away</p>
+                <span>Parque Principal</span>
+                <p>a {post.postDetail.restaurant}m </p>
               </div>
             </div>
           </div>
-          <p className="title">Location</p>
+          <p className="title">Ubicacion</p>
           <div className="mapContainer">
             <Map items={[post]} />
           </div>
           <div className="buttons">
             <button>
               <img src="/chat.png" alt="" />
-              Send a Message
+              Enviar Mensaje
             </button>
             <button
               onClick={handleSave}
@@ -150,10 +162,13 @@ function SinglePage() {
               }}
             >
               <img src="/save.png" alt="" />
-              {saved ? "Place Saved" : "Save the Place"}
+              {saved ? "Lugar Guardado" : "Guardar Lugar"}
             </button>
           </div>
         </div>
+      <button 
+       onClick={()=> alquilar()}
+      className="btn">Alquilar</button>
       </div>
     </div>
   );

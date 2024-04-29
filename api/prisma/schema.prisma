@@ -26,6 +26,7 @@ model Post {
   longitude  String
   type       Type
   property   Property
+  estado     Estate      @default(disponible)
   createdAt  DateTime    @default(now())
   user       User        @relation(fields: [userId], references: [id])
   userId     String      @db.ObjectId
@@ -34,8 +35,8 @@ model Post {
 }
 
 enum Type {
-  buy
-  rent
+  vender
+  rentar
 }
 
 enum Property {
@@ -43,6 +44,11 @@ enum Property {
   house
   condo
   land
+}
+
+enum Estate {
+  disponible
+  en_proceso
 }
 
 model PostDetail {

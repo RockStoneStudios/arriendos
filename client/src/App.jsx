@@ -9,6 +9,9 @@ import Register from "./routes/register/register";
 import ProfileUpdatePage from "./routes/profileUpdatePage/profileUpdatePage";
 import NewPostPage from "./routes/newPostPage/newPostPage";
 import { listPageLoader, profilePageLoader, singlePageLoader } from "./lib/loaders";
+import Nosotros from "./routes/nosotros/Nosotros";
+import Contacto from "./routes/contactos/contacto";
+
 
 function App() {
   const router = createBrowserRouter([
@@ -39,6 +42,14 @@ function App() {
           path: "/register",
           element: <Register />,
         },
+        {
+          path: "/nosotros",
+          element: <Nosotros/>
+        },
+         {
+          path : "/contacto",
+          element : <Contacto/>
+         }
       ],
     },
     {

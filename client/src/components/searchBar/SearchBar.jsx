@@ -2,11 +2,11 @@ import { useState } from "react";
 import "./searchBar.scss";
 import { Link } from "react-router-dom";
 
-const types = ["buy", "rent"];
+const types = ["vender", "rentar"];
 
 function SearchBar() {
   const [query, setQuery] = useState({
-    type: "buy",
+    type: "vender",
     city: "",
     minPrice: 0,
     maxPrice: 0,
@@ -37,7 +37,7 @@ function SearchBar() {
         <input
           type="text"
           name="city"
-          placeholder="City"
+          placeholder="Municipio"
           onChange={handleChange}
         />
         <input
@@ -45,7 +45,7 @@ function SearchBar() {
           name="minPrice"
           min={0}
           max={10000000}
-          placeholder="Min Price"
+          placeholder="Precio Minimo"
           onChange={handleChange}
         />
         <input
@@ -53,7 +53,7 @@ function SearchBar() {
           name="maxPrice"
           min={0}
           max={10000000}
-          placeholder="Max Price"
+          placeholder="Precio Maximo"
           onChange={handleChange}
         />
         <Link

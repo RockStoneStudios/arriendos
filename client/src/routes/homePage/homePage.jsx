@@ -11,26 +11,25 @@ function HomePage() {
     <div className="homePage">
       <div className="textContainer">
         <div className="wrapper">
-          <h1 className="title">Find Real Estate & Get Your Dream Place</h1>
+          <h1 className="title">Encuentre bienes raíces y viva en el lugar de sus sueños</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-            explicabo suscipit cum eius, iure est nulla animi consequatur
-            facilis id pariatur fugit quos laudantium temporibus dolor ea
-            repellat provident impedit!
+           Explora y reserva tu próximo alojamiento en el hermoso municipio de Sopetrán con nuestra 
+           conveniente app de arriendos. Te ofrecemos una experiencia sin complicaciones para encontrar
+           el lugar perfecto para tu estadía en este encantador destino.
           </p>
           <SearchBar />
           <div className="boxes">
             <div className="box">
-              <h1>16+</h1>
-              <h2>Years of Experience</h2>
+              <h1>1+</h1>
+              <h2>Años de Experiencia</h2>
             </div>
             <div className="box">
-              <h1>200</h1>
-              <h2>Award Gained</h2>
+              <h1>2</h1>
+              <h2>Premio Obtenidos</h2>
             </div>
             <div className="box">
-              <h1>2000+</h1>
-              <h2>Property Ready</h2>
+              <h1>4+</h1>
+              <h2>Propiedades Arrendadas</h2>
             </div>
           </div>
         </div>

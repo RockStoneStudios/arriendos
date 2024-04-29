@@ -58,31 +58,31 @@ function NewPostPage() {
         <div className="wrapper">
           <form onSubmit={handleSubmit}>
             <div className="item">
-              <label htmlFor="title">Title</label>
+              <label htmlFor="title">Titulo</label>
               <input id="title" name="title" type="text" />
             </div>
             <div className="item">
-              <label htmlFor="price">Price</label>
+              <label htmlFor="price">Precio</label>
               <input id="price" name="price" type="number" />
             </div>
             <div className="item">
-              <label htmlFor="address">Address</label>
+              <label htmlFor="address">Direccion</label>
               <input id="address" name="address" type="text" />
             </div>
             <div className="item description">
-              <label htmlFor="desc">Description</label>
+              <label htmlFor="desc">Descripcion</label>
               <ReactQuill theme="snow" onChange={setValue} value={value} />
             </div>
             <div className="item">
-              <label htmlFor="city">City</label>
+              <label htmlFor="city">Municipio</label>
               <input id="city" name="city" type="text" />
             </div>
             <div className="item">
-              <label htmlFor="bedroom">Bedroom Number</label>
+              <label htmlFor="bedroom">Numero de Habitaciones</label>
               <input min={1} id="bedroom" name="bedroom" type="number" />
             </div>
             <div className="item">
-              <label htmlFor="bathroom">Bathroom Number</label>
+              <label htmlFor="bathroom">Numero de Baños</label>
               <input min={1} id="bathroom" name="bathroom" type="number" />
             </div>
             <div className="item">
@@ -96,63 +96,63 @@ function NewPostPage() {
             <div className="item">
               <label htmlFor="type">Type</label>
               <select name="type">
-                <option value="rent" defaultChecked>
-                  Rent
+                <option value="rentar" defaultChecked>
+                  Rentar
                 </option>
-                <option value="buy">Buy</option>
+                <option value="comprar">Venta</option>
               </select>
             </div>
             <div className="item">
-              <label htmlFor="type">Property</label>
+              <label htmlFor="type">Propiedad</label>
               <select name="property">
-                <option value="apartment">Apartment</option>
-                <option value="house">House</option>
-                <option value="condo">Condo</option>
-                <option value="land">Land</option>
+                <option value="apartment">Apartamento</option>
+                <option value="house">Casa</option>
+                <option value="condo">Condominio</option>
+                <option value="land">Lote</option>
               </select>
             </div>
 
             <div className="item">
-              <label htmlFor="utilities">Utilities Policy</label>
+              <label htmlFor="utilities">Política de servicios públicos</label>
               <select name="utilities">
-                <option value="owner">Owner is responsible</option>
-                <option value="tenant">Tenant is responsible</option>
-                <option value="shared">Shared</option>
+                <option value="owner">El dueño es responsable</option>
+                <option value="tenant">El Inquilino es responsable</option>
+                <option value="shared">Compartido</option>
               </select>
             </div>
             <div className="item">
-              <label htmlFor="pet">Pet Policy</label>
+              <label htmlFor="pet">Política de mascotas</label>
               <select name="pet">
-                <option value="allowed">Allowed</option>
-                <option value="not-allowed">Not Allowed</option>
+                <option value="allowed">Permitido</option>
+                <option value="not-allowed">No Permitido</option>
               </select>
             </div>
             <div className="item">
-              <label htmlFor="income">Income Policy</label>
+              <label htmlFor="income">Política de Ingresos</label>
               <input
                 id="income"
                 name="income"
                 type="text"
-                placeholder="Income Policy"
+                placeholder="Política de Ingresos"
               />
             </div>
             <div className="item">
-              <label htmlFor="size">Total Size (sqft)</label>
+              <label htmlFor="size">Total Metros (cuadrados)</label>
               <input min={0} id="size" name="size" type="number" />
             </div>
             <div className="item">
-              <label htmlFor="school">School</label>
+              <label htmlFor="school">Escuela mas Cercana</label>
               <input min={0} id="school" name="school" type="number" />
             </div>
             <div className="item">
-              <label htmlFor="bus">bus</label>
+              <label htmlFor="bus">Terminal de Transporte</label>
               <input min={0} id="bus" name="bus" type="number" />
             </div>
             <div className="item">
-              <label htmlFor="restaurant">Restaurant</label>
+              <label htmlFor="restaurant">Parque Pricipal</label>
               <input min={0} id="restaurant" name="restaurant" type="number" />
             </div>
-            <button className="sendButton">Add</button>
+            <button className="sendButton">Agregar</button>
             {error && <span>error</span>}
           </form>
         </div>
@@ -164,7 +164,7 @@ function NewPostPage() {
         <UploadWidget
           uwConfig={{
             multiple: true,
-            cloudName: "lamadev",
+            cloudName: "dbyiamu50",
             uploadPreset: "estate",
             folder: "posts",
           }}

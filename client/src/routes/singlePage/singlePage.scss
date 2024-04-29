@@ -52,12 +52,13 @@
               display: flex;
               gap: 5px;
               align-items: center;
-              color: #888;
+              color: #444;
               font-size: 14px;
+              font-weight: 500;
 
               img {
-                width: 16px;
-                height: 16px;
+                width: 18px;
+                height: 18px;
               }
             }
             .price {
@@ -66,7 +67,7 @@
               border-radius: 5px;
               width: max-content;
               font-size: 20px;
-              font-weight: 300;
+              font-weight: 600;
             }
           }
           .user {
@@ -93,8 +94,10 @@
           }
         }
         .bottom {
-          margin-top: 50px;
+          margin: 50px 0px;
+          
           color: #555;
+          
           line-height: 20px;
         }
       }
@@ -116,7 +119,7 @@
       padding: 0px 20px;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 16px;
 
       @include md {
         padding: 20px;
@@ -211,6 +214,16 @@
           }
         }
       }
+    }
+    .btn{
+      margin-top: 20px;
+      margin-bottom: 40px;
+      background-color: red;
+      color: white;
+      padding: 5px 8px;
+      border: none;
+      cursor: pointer;
+
     }
   }
 }

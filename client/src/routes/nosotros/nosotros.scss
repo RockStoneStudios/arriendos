@@ -1,0 +1,53 @@
+@import '../../responsive.scss';
+
+.container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding: 0px 100px;
+    gap: 60px;
+
+     @include md{
+        padding: 2px 45px;
+     }
+
+     @include sm{
+        padding: 2px 30px;
+     }
+
+    .title{
+        position: relative;
+        h1{
+            font-size: 38px;
+            font-weight: 700;
+
+            @include md {
+                font-size: 28px;
+            }
+            @include sm {
+                font-size: 22px;
+            }
+         &:hover{
+            font-size: 42px;
+            font-weight: 900;
+            transition: all 0.8s ease-in;
+         }   
+        }
+        h6{
+            position: absolute;
+            right: -38px;
+            top: 38px;
+            font-size: 15px;
+            font-weight: 400;
+        }
+    }
+    .text-description{
+        line-height: 30px;
+        @include md{
+            line-height: 18px;
+            font-size: 13px;
+        }
+    }
+}

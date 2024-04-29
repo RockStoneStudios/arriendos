@@ -19,11 +19,12 @@ function Navbar() {
       <div className="left">
         <a href="/" className="logo">
           <img src="/logo.png" alt="" />
-          <span>LamaEstate</span>
+          <span>SopeArriendos</span>
         </a>
-        <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Contact</a>
+        <a href="/list">Propiedades</a>
+        {/* <a href="/">Nosotros</a> */}
+        <Link to='/nosotros'>Nosotros</Link>
+        <a href="/contacto">Contacto</a>
         <a href="/">Agents</a>
       </div>
       <div className="right">
@@ -33,7 +34,7 @@ function Navbar() {
             <span>{currentUser.username}</span>
             <Link to="/profile" className="profile">
               {number > 0 && <div className="notification">{number}</div>}
-              <span>Profile</span>
+              <span>Perfil</span>
             </Link>
           </div>
         ) : (
@@ -53,7 +54,7 @@ function Navbar() {
         </div>
         <div className={open ? "menu active" : "menu"}>
           <a href="/">Home</a>
-          <a href="/">About</a>
+          <a href="/">Nosotros</a>
           <a href="/">Contact</a>
           <a href="/">Agents</a>
           <a href="/">Sign in</a>
